@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                var $li_title = $("ul li:eq(0)").attr("title");
+                $("p").attr("title", "fruit");
+                $("p").attr("name", "水果");
+                $("div").attr({ "title": "sport", "id": "div1" });
+            });
+
+            $("#btn2").click(function () {
+                $("p").removeAttr("name");
+                $("div").removeAttr("title");
+            });
+
+            $("#btn3").click(function () {
+                alert($("ul:eq(1)").text());
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>你最喜欢的水果?</p>
+    <ul>
+        <li title="苹果">苹果</li>
+        <li title="桔子">桔子</li>
+        <li title="香蕉">香蕉</li>
+    </ul>
+    <div>
+        你最喜欢的运动
+        <ul>
+            <li>游泳</li>
+            <li>篮球</li>
+            <li>足球</li>
+        </ul>
+    </div>
+
+    <button id="btn1">获取设置属性</button>
+    <button id="btn2">移除属性</button><br /><br />
+    <button id="btn3">获取值</button><br /><br />
+
+
+</body>
+</html>

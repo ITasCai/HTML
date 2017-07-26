@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        function getP() {
+            document.getElementById("header").innerHTML = "济宁慧与";
+        }
+
+        function getDom() {
+            document.getElementById("p1").innerText = "你好世界";
+        }
+        function getName() {
+            var arr = document.getElementsByName("inputName");
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].value = i;
+                arr[i].style.color = "red";
+            }
+            document.getElementsByName("inputName")[1].value = "狗蛋";
+        }
+
+        function getHttp() {
+            var http = document.getElementsByTagName("a");
+            for (var i = 0; i < http.length; i++) {
+                http[i].innerHTML = "百度";
+            }
+        }
+
+        function getClass() {
+            var cl = document.getElementsByClassName("test");
+
+            for (var i = 0; i < cl.length; i++) {
+                cl[1].innerHTML = "欲穷千里目，更上一层楼";
+                cl[1].style.color = "red";
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1 id="header">标题一</h1>
+    <p id="p1">hello world!</p>
+    <input type="button" name="Name" value="改变标题" onclick="getP();" />
+    <input type="button" name="Name" value="改变p" onclick="getDom();" />
+
+    <input type="text" name="inputName" value="" id="UserName" /><br />
+    <input type="text" name="inputName" value="" /><br />
+    <input type="text" name="inputName" value="" /><br />
+    <input type="text" name="inputName" value="" /><br />
+    <input type="text" name="inputName" value="" /><br />
+    <input type="button" name="Name" value="添加索引" onclick="getName();" />
+
+    <ul>
+        <li><a href="#">新浪</a></li>
+        <li><a href="#">百度</a></li>
+        <li><a href="#">腾讯</a></li>
+        <li><a href="#">搜狐</a></li>
+        <li><a href="#">网易</a></li>
+    </ul>
+    <input type="button" name="Name" value="修改为百度" onclick="getHttp();" />
+
+
+    <p class="test">
+        白日依山尽，黄河入海流
+    </p>
+
+    <p class="test">
+       北京欢迎您！
+    </p>
+    <input type="button" name="Name" value="getElementsByClassName" onclick="getClass();" />
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        var today = new Date();
+        var hour = today.getHours();
+        if (hour >= 6 && hour < 12) {
+            document.write("早上好");
+
+        } else if (hour>=12&&hour<18) {
+            document.write("下午好");
+        } else if (hour >= 18 && hour < 24) {
+            document.write("晚上好");
+        } else {
+            document.write("夜里好");
+        }
+        document.write("<br/>");
+
+        var num = 0;
+        i = 1;
+        while (i<10) {
+            if (i % 2 != 0) {
+               num= num + i;
+            }
+            i++;
+        }
+        document.write("10以内的奇数和为" + num);
+        
+        var myDate = new Date();
+        var weekday = myDate.getDay();
+        var result;
+        switch (weekday) {
+            case 0:
+                result = "星期天";
+                break;
+            case 1:
+                result = "星期1";
+                break;
+            case 2:
+                result = "星期2";
+                break;
+            case 3:
+                result = "星期3";
+                break;
+            case 4:
+                result = "星期4";
+                break;
+            case 5:
+                result = "星期5";
+                break;
+            case 6:
+                result = "星期6";
+                break;
+
+        }
+        document.write(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

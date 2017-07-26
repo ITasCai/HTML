@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#p1").click(function () {
+                alert($(this).html());
+            }).css("color", "red").hide().show().attr("title","haha");
+        });
+       
+        jQuery(document).ready(function () {
+            alert("无敌是多么，多么寂寞");
+        });
+
+        window.onload=(function () {
+            alert("哈哈");
+        });
+
+        window.onload=(function () {
+            alert("嘎嘎");
+        });
+
+        $(function () {
+            alert("shuai");
+        });
+    </script>
+</head>
+<body>
+    <p id="p1">今天</p>
+</body>
+</html>

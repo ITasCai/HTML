@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        window.onload = function () {
+            var div = document.getElementById("container");
+            //for (var i = 0; i < div.childNodes.length; i++) {
+            //    alert("节点名称"+div.childNodes[i].nodeName+"\n"+
+            //           "节点值"+ div.childNodes[i].nodeValue+"\n"+ 
+            //            "节点类型" + div.childNodes[i].nodeType + "\n");
+            //}
+           // alert(div.childNodes.length);
+            alert(div.childNodes[0].nodeValue);
+            alert(div.firstChild.nodeValue);
+
+
+            alert(div.childNodes[div.childNodes.length - 1].nodeValue);
+            alert(div.lastChild.nodeValue);
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        济宁慧与
+        <h1>个人网站</h1>
+        <p id="p1">hello world</p>
+        <div id="content">
+            <ul id="hobby">
+                <li>上网</li>
+                <li>学习</li>
+                <li>睡觉</li>
+                <li>音乐</li>
+            </ul>
+            <ul >
+                <li>c#</li>
+                <li>java</li>
+                <li>php</li>
+                <li>sql</li>
+            </ul>
+        </div>
+        众阳定制班
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        function openWindow() { 
+            window.open(
+                "http://www.baidu.com",
+                "百度",
+                                "height=400,width=600,tolbar=yes,scrollbars=no,location=no,"+
+               "left=200px,top=100px"
+                );
+        }
+
+        function openAdd() {
+            window.open(
+                "child.html",
+                "增加部门信息",
+                "height=400,width=600,tolbar=yes,scrollbars=no,location=no," +
+               "left=200px,top=100px"
+                );
+        }
+    </script>
+</head>
+<body>
+    <input  type="button" name="name" value="打开窗口" onclick="openWindow()"/>
+    <input type="button" name="name" value="增加" onclick="openAdd();" />
+    <input type="text" name="name" value="" id="txtReturn" />
+</body>
+</html>

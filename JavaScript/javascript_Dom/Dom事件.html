@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        function changeText(obj) {
+            obj.innerText = "济宁慧与";
+        }
+        window.onload = function () {
+            document.getElementById("btnChange").onclick = function () {
+                document.getElementById("demo").innerHTML = "<em>济宁慧与</em>";
+                document.getElementById("demo").style = "font-size:20px;color:red;font-family:宋体";
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("btnCheck").onclick = function () {
+                var num = document.getElementsByName("number");
+                var str = num[0].value;
+                if (isNaN(str)) {
+                    alert("不是数字");
+                }else {
+                    alert("是数字");
+                }
+
+                }
+            }
+        
+        function checkName() {
+            var name = document.getElementById("textName").value;
+            
+            var sp=document.getElementById("msg");
+            if (name.trim().length<6) {
+                sp.innerHTML = "至少为6位"
+                sp.style = "color:red";
+            } else {
+                sp.innerHTML = ""
+            }
+                 
+        }
+
+
+        function mouseOver(obj) {
+            obj.innerText = "鼠标放入"
+            obj.style = "color:green"
+        }
+        function mouseOut(obj) {
+            obj.innerText = "鼠标移开"
+            obj.style = "color:red"
+        }
+
+
+        function lightOn() {
+            document.getElementById("myimage").src = "../image/bulbon.gif";
+        }
+
+        function lightOFF() {
+            document.getElementById("myimage").src = "../image/bulboff.gif";
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1 onclick="changeText(this);">点击改变文本</h1>
+        <p id="demo">嘎嘎龙</p>
+        <button id="btnChange">改变文本</button>
+    </div>
+    <div>
+        <label>请输入数字：</label>
+        <input type="text" name="number" value="0" />
+        <input type="button" name="number" value="检查是否为数字"  id="btnCheck" /><br/>
+    
+    </div>
+
+    <div>
+        <p>使用onchange验证用户名至少6位</p>
+        <input type="text" name="name" value=""  id="textName" onchange="checkName();"/>
+        <span id="msg"></span>
+    </div>
+
+    <div>
+        <p style="width:200px;height:200px;background-color:gray" id="content" onmouseout="mouseOut(this)" onmouseover="mouseOver(this)"></p>
+    </div>
+
+    <div>
+        <p>开灯，关灯</p>
+        <img  src="../image/bulboff.gif" id="myimage" alt="灯" onmouseup="lightOFF(); " onmousedown="lightOn();"/>
+    </div>
+</body>
+</html>

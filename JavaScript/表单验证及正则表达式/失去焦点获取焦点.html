@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        //失去焦点
+        function inputblur() {
+            var ms = document.getElementById("error");
+            ms.innerHTML = "请输入用户名";
+            ms.style = "color:red";
+        }
+        //获取焦点
+        function inputfocus() {
+            var ms = document.getElementById("error");
+            ms.innerHTML = "";
+        
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="username" name="name" onblur="inputblur();"  onfocus="inputfocus();" value="" placeholder="请输入用户名"/>
+    <span id="error"></span>
+</body>
+</html>

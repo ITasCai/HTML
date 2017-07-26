@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        //获取属性
+        function GetAtrr() {
+            //var a = document.getElementsByTagName("a")[0];
+            //alert(a.getAttribute("target"));
+            //alert(a.getAttribute("href"));
+
+            var img = document.getElementsByTagName("img")[0];
+            var p = document.getElementById("p1");
+            var im = img.getAttribute("alt");
+            p.innerHTML = im;
+
+
+            var d = document.getElementsByClassName("container")[0];
+            document.getElementById("p2").innerHTML = d.getAttribute("title");
+
+           
+            var aa = document.getElementsByTagName("a").length-1
+            alert(document.getElementsByTagName("a")[aa].innerHTML);
+        }
+    </script>
+</head>
+<body>
+    <a href="http://www.baidu.com" target="_blank">百度</a>
+    <a href="http://www.sohu.com" target="_parent">搜狐</a>
+    <a href="http://www.sina.com" target="_blank">新浪</a>
+    <a href="http://www.csdn.com" target="_blank">CSDN</a>
+    <img  src="../image/bulboff.gif " alt="灯泡" title="开/关" width="100"
+         height="200"/>
+    <div class="container" title="main">
+
+    </div>
+
+    <button onclick="GetAtrr();">获取属性</button>
+    <p id="p1" ></p>
+    <p id="p2"></p>
+</body>
+</html>

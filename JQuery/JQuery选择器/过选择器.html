@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".one p:first").css("color", "red");
+                $(".one p:last").css("color", "blue");
+                $(".one p:even").css("color", "gray");
+                $(".one p:odd").css("color", "yellow");
+                $(".one p:eq(2)").css({ "color": "white", "backgroundColor": "black" });
+                $(".one:header").css("color", "red");
+                $(".one:hidden").css("background", "yellow");
+                $(".one a[href='#a1']").css("color", "red");
+
+                $(".one a[target='_parent']").css("color", "yellow").click(function () {
+                    alert("这个网站这很不错");
+                });
+
+                $(".input_content input[name='username']").val("用户名");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <h2>登鹳雀楼</h2>
+            <span>白居易</span>
+            <p>白日依山尽,</p>
+            <p>黄河入海流,</p>
+            <p>欲穷千里目,</p>
+            <p>更上一层楼。</p>
+            <p hidden>这首诗不错</p>
+            <a href="#a1" target="_blank">引入一</a>
+            <a href="#a2" target="_parent">引入二</a>
+            <div class="input_content">
+                <input type="text" name="username" value="" /><br />
+                <input type="password" name="userpwd" value="" /><br />
+                <input type="button" name="btnSubmit" value="提交" />
+            </div>
+            <button id="btn1">过滤选择器1</button>
+        </div>
+        <div class="two">
+            <h2>茅屋为秋风所破歌</h2>
+            <span>杜甫</span>
+            <p>安得广厦千万间，</p>
+            <p>大庇天下寒士俱欢颜，</p>
+            <p>风雨不动安如山！</p>
+            <p>呜呼！</p>
+            <p>何时眼前突兀见此屋，</p>
+            <p>吾庐独破受冻死亦足！</p>
+            <button id="btn2">过滤选择器2</button>
+        </div>
+    </div>
+</body>
+</html>

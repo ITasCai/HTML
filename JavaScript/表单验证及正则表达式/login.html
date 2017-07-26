@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        function validate() {
+                //var username = document.getElementById("username");
+                //var password = document.getElementById("password");
+                //if (username.value.trim().length == 0) {
+                //    alert("请输入用户名");
+                //    return false;
+                //}
+                //else if (password.value.trim().length == 0) {
+                //    alert("请输入密码");
+                //    return false;
+                //}
+                //else {
+                //    return true;
+            //}
+            if (inputpass()&&inputuser()&&inputspan()&&ifMa()) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+       
+
+
+        function inputuser() {
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+            if (username.value.trim().length == 0) {
+                var ms = document.getElementById("spuser");
+                ms.innerHTML = "请输入用户名";
+                ms.style = "color:red";
+
+            }
+        }
+
+        function inputpass() {
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+            if (password.value.trim().length == 0) {
+                var ms = document.getElementById("sppass");
+                ms.innerHTML = "请输入密码";
+                ms.style = "color:red";
+            }
+            
+        }
+
+        function inputspan() {
+            var sp = document.getElementsByTagName("span");
+            for (var i = 0; i < sp.length; i++) {
+                sp[i].innerHTML = "";
+            }
+        }
+
+   
+            function createCode() {
+                var code = "";
+                var codeLength = 4;
+                var chedckCode = document.getElementById("chedckCode");
+                var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                                        'a', 'b', 'c', 'd', 'e', 'f', 'g',
+                                        'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                                        'o', 'p', 'q', 'r', 's', 't', 'u',
+                                        'v', 'w', 'x', 'y', 'z');
+
+                for (var i = 0; i < codeLength; i++) {
+                    var num = Math.floor(Math.random() * 36);
+                    code += codeChars[num];
+                }
+                chedckCode.innerText = code;
+            }
+            window.onload = function () {
+                createCode();
+        }
+
+            function ifMa() {
+                
+                var txt = document.getElementById("inpma").value;
+                var ma = document.getElementById("chedckCode").innerText;
+                var yzm = document.getElementById("yzm");
+                if (txt == ma) {
+                    yzm.innerHTML = "验证码正确";
+                    yzm.style = "color:red";
+                    
+                } else {
+                    yzm.innerHTML = "验证码错误";
+                    yzm.style = "color:red";
+                }
+               
+            }
+
+
+            function valUsername() {
+                var username = document.getElementById("username");
+                var errorid = document.getElementById("spuser");
+                var reg = "/^[a-zA-Z]{1}[a-zA-Z0-9]{5,19}$";
+                if (username.value.trim().length==0) {
+                    
+                }
+            }
+
+    </script>
+</head>
+<body >
+    <div style="margin-left:370px; height:400px;height:400px">
+        <form action="index.aspx" method="post">
+            <label>用户名：</label>
+            <input id="username" type="text" name="name" value="" placeholder="请输入用户名"  onblur="inputuser();" onfocus="inputspan();"/>
+            <span id="spuser"></span><br />
+            <label>密码：&nbsp;&nbsp;&nbsp;</label>
+            <input id="password" type="password" name="name" value="" placeholder="请输入密码" onblur="inputpass()" onfocus="inputspan();"/>
+            <span id="sppass"></span><br />
+            <label>验证码：</label>
+            <input type="text" name="name" value="" style="width:60px" id="inpma"/>
+            <span id="chedckCode"></span>
+            <input type="button" value="换一张"  onclick="createCode()"/>
+            <span id="yzm"></span>
+            <br />
+            <input type="submit" value="登录" onclick="return validate(),ifMa();"  />
+            <input type="reset" value="重置" />
+        </form>
+    </div>
+</body>
+</html>

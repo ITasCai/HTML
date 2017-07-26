@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>string方法</title>
+	<meta charset="utf-8" />
+    <script>
+        var str = "ABCDEF"
+        var result = str.indexOf("B",0);
+        document.write("返回字符串从B从索引0开始出现的位置" + result + "<br/>");
+
+        var str1 = "ABCDEFGH"
+        var result1 = str.lastIndexOf("CD");
+        document.write("返回字符串cd最后出现的位置" + result1 + "<br/>");
+
+
+        var str2 = "ABCDEF"
+        var result2 = str.charAt(3);
+        document.write("返回索引位置为3的字符" + result2 + "<br/>");
+
+        var str3 = "ABCDEF"
+        var result3 = str.substring(2, 4);
+        document.write("返回制定位置的字符串" + result3 + "<br/>");
+
+        var str4 = "hello world";
+        var result4 = str.replace("world","china")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

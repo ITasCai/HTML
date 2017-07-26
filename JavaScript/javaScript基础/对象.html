@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        //var obj = new Object();
+        //obj.name = "狗蛋";
+        //obj.age = 22;
+        //obj.ShowName = function () {
+        //    alert(this.name);
+        //}
+
+
+        //obj.ShowAge = function () {
+        //    alert(this.age);
+        //}
+
+        //obj.ShowName();
+        //obj.ShowAge();
+
+
+
+        //var p1 = {};
+
+        //var car = {
+        //    brand: "奥迪",
+        //    color: "red",
+        //    price:5000
+            
+        //};
+
+
+        //var p2 = {
+        //    name: "李四",
+        //    age:18,
+        //    sex: "女",
+        //    mycar: car,
+        //    msg: function () {
+        //        alert("姓名："+this.name+"年龄："+this.age+"性别："+this.sex)
+        //    }
+
+        //};
+
+        //alert(p2.name + ":" + p2.age + ":" + p2.sex + ":" + p2.mycar.color + ":" + p2.mycar.price);
+
+        //p2.msg();//调用p2对象的msg方法
+
+
+        //p2.name = "王五";
+        //p2.age = 20;
+        //p2["sex"] = "男";
+        //p2["mycar"].brand = "宝马";
+        //p2.msg();
+        //document.write(p2.mycar.brand);
+
+
+        ////3.工厂方法
+        //function CreeateObj(name, age, sex) {
+        //    var obj = new Object();
+        //    obj.name = name;
+        //    obj.age = age;
+        //    obj.sex = sex;
+        //    obj.showInfo = function () {
+        //        alert("姓名："+this,name+"年龄："+this.age+"性别"+this.sex);
+        //    }
+        //    return obj;
+        //}
+
+        //var obj1 = CreeateObj("李四", 20, "男");
+        //obj1.showInfo();
+        //var obj2 = CreeateObj("狗蛋", 20, "男");
+        //obj2.showInfo();
+
+        ////构造函数方式
+
+        //function Person(name, age) {
+        //    this.name = name;
+        //    this, age = age;
+        //    this.showInfo = function () {
+        //        alert("姓名：" + this, name + "年龄：" + this.age);
+        //    }
+        //}
+        //    var obj1 = Person("李四", 20);
+        //    obj1.showInfo();
+        //    var obj2 = Person("狗蛋", 20);
+        //    obj2.showInfo();
+
+
+
+            //对象数组
+            var car1={
+                brand:"audi",
+                color:"red",
+                price:200
+            }
+
+
+            var car2={
+                brand:"bmw",
+                color:"red",
+                price:200
+            }
+
+            var car3={
+                brand:"banz",
+                color:"black",
+                price:700
+            }
+
+            var car=new Array(car1,car2,car3);
+            for(var i=0;i<car.length;i++){
+                document.write("品牌："+car[i]["brand"]+
+                   "颜色："+car[i]["color"]+
+                   "价格："+car[i]["price"]+"<br/>" );
+            }
+
+         //使用for in
+            for (var number in car) {
+                document.write(car[number]["brand"] + car[number]["color"] + car[number]["price"])
+            }
+
+
+            car.forEach(function (value, index) {
+                alert(value.brand+"--"+value.color+"--"+value.price);
+            });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

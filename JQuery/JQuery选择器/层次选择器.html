@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js">
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".header ul").css("backgroundColor", "blue");
+            });
+
+            $("#btn2").click(function () {
+                $(".header >ul").css("backgroundColor", "red");
+            });
+
+            $("#btn3").click(function () {
+                $("#menu1 >ul").css("backgroundColor","rosybrown");
+            });
+
+            $("#btn4").click(function () {
+                $("#menu1+li").css("backgroundColor", "rosybrown");
+            });
+
+            $("#btn5").click(function () {
+                $("#menu2~li").css("backgroundColor", "brown");
+            });
+
+            $("#btn").click(function () {
+                $("*").removeAttr("style");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3 id="title">层次选择器</h3>
+            <ul>
+                <li id="menu1">
+                    菜单一
+                    <ul>
+                        <li id="menu2">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </li>
+                <li>
+                    菜单二
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                    </ul>
+                </li>
+                <li>
+                    菜单三
+                    <ul>
+                        <li>1</li>
+                    </ul>
+                </li>
+            </ul>
+            <ol style="list-style-type:none">
+                兴趣爱好
+                <li>上网</li>
+                <li>唱歌</li>
+                <li>游泳</li>
+            </ol>
+            <div class="focus">
+                <ul>
+                    <li>收藏本站</li>
+                    <li>设为主页</li>
+                    <li>联系我们</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button id="btn1">选择.header中的所有ul元素</button>
+    <button id="btn2">选择.header中的子元素ul</button>
+    <button id="btn3">选择#menu1中子元素ul</button>
+    <button id="btn4">选择#menu1中的下一个li元素</button>
+    <button id="btn5">选择#menu2中同级li元素</button>
+    <button id="btn">重置</button>
+</body>
+</html>

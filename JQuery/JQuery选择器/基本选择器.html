@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$("#title").css("color","red");
+
+            $("#btn1").click(function () {
+                $("#title").css("color", "red");
+                $("#title").hide();//隐藏
+                $("#title").show();//显示
+
+                $("#title").click(function () {
+                    alert($(this).text());
+                    $(this).html("<strong>id选择器</strong>");
+                    $(this).hide();
+                });
+
+                $("#userName").val("admin");
+                alert($("#userAge").val());
+            });
+
+            $("#btn2").click(function () {
+               alert( $(".p1").text());
+            });
+        
+            $(".container").css({ "backgroundColor": "gray", "color": "blue" });
+
+            $(".container").mousemove(function () {
+                $(".container").css("backgroundColor", "gray");
+            }).mouseout(function () {
+                $(".container").css("backgroundColor", "red");
+            //}).click(function () {
+            //    $(this).hide();
+            });
+
+
+            $("#btn3").click(function () {
+                $("span").css({ "backgroundColor": "red", "color": "blue" });
+            });
+
+            $("#btn4").click(function () {
+                $(".main *").css("backgroundColor","#ffff00");
+            });
+
+            $("#btn5").click(function () {
+                $("#title,.p1").css("backgroundColor", "blue");
+                //$(".header:text").css("color", "red");
+                $("input:text").eq(1).css("color", "red");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h3 id="title">基本选择器</h3>
+        <p class="p1">类选择器</p>
+        <span>标签选择器</span>
+        <div class="header">
+            网站头部
+        </div>
+        <div class="main">
+            <div id="content">
+                显示内容
+            </div>
+        </div>
+        <div>
+            用户名：<input  type="text" name="name" id="userName" value=""/><br/>
+            年龄：<input type="text" name="name" id="userAge" value="18" /><br />
+        </div>
+
+        <input type="button" name="name" id="btn1" value="id选择器" />
+        <input type="button" name="name" id="btn2" value="类选择器" />
+        <input type="button" name="name" id="btn3" value="标签选择器" />
+        <input type="button" name="name" id="btn4" value="通配符选择器" />
+        <input type="button" name="name" id="btn5" value="设置多个元素" />
+     
+
+    </div>
+</body>
+</html>

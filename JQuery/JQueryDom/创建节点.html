@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                var $li1 = $("<li>菠萝</li>");
+                var $li2 = $("<li title='梨子'>梨子</li>");
+                //$("ul").append($li1);
+                //$("ul").append($li2);
+                $("ul").append($li1).append($li2);
+                $("<li>榴莲</li>").appendTo($("ul"));
+
+                //$("ul li:eq(3)").attr("title", "菠萝");
+                //$("ul li:even").css("background", "red");
+                //$("ul li:odd").css("background", "blue");
+
+                $("ul li").each(function () {
+                    if ($(this).index() % 2 == 0) {
+                        $("ul li:even").css("background", "red");
+                    } else {
+                        $("ul li:odd").css("background", "blue");
+                    }
+                });
+            });
+        });
+     
+    </script>
+</head>
+<body>
+    <h3>Dom树</h3>
+    <p title="水果">你喜欢的水果是?</p>
+    <ul>
+        <li title="苹果">苹果</li>
+        <li title="橘子">橘子</li>
+        <li title="香蕉">香蕉</li>
+    </ul>
+    <button id="btn1">创建元素节点</button>
+</body>
+</html>

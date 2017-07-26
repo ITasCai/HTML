@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        function setCSS() {
+            var p1 = document.getElementById("p1");
+            //p1.style.color = "red";
+            //p1.style.backgroundColor = "gray";
+            //p1.style.fontFamily = "宋体";
+
+           // p1.style.cssText = "color:red;background-Color=gray";
+
+            p1.style = "color:red;border:1px solid blue;text-align:center";
+        }
+        
+        function setCSS2() {
+            var p2 = document.getElementById("p2");
+            p2.style = "color:blue;border:1px solid gray;text-align:center";
+        }
+
+        function setCSS3() {
+            var p3 = document.getElementsByClassName("p3");
+            p3[0].style = "color:red;fontFamily = '隶书';text-align:center";
+            p3[0].innerHTML = "众阳软件";
+        }
+
+        function showText(obj) {
+            var show = document.getElementById("p4");
+            var state = show.style.visibility;
+            if (state=="hidden") {
+                show.style.visibility = "visible";
+                obj.innerHTML="隐藏文本"
+            } else {
+                show.style.visibility = "hidden";
+                obj.innerHTML = "显示文本"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <p id="p1">慧与济宁</p>
+    <p id="p2">慧与济宁</p>
+    <p class="p3">众阳</p>
+    <button id="btnok" onclick="setCSS();">改变CSS</button>
+    <button id="btnok" onclick="setCSS2();">改变CSS-p2</button>
+    <button id="btnok" onclick="setCSS3();">改变CSS-p3</button>
+    <p id="p4">济宁慧与基地</p>
+    <button id="btnShow" class="btn" onclick="showText(this);">隐藏文本</button>
+</body>
+</html>

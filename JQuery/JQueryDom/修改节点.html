@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            //复制节点
+            $("#btn1").click(function () {
+                var $li = $("ul:first li:eq(0)").clone(true);
+                $li.attr({ "title": "葡萄" });
+                $li.html("葡萄");
+                //$("ul").append($li);
+                
+                // $("#fruit li:eq(0)").append($li);
+                //$li.insertAfter($("#fruit li:first"));
+                //$("#fruit li:eq(1)").before($li);
+                
+                $("<li title='菠萝'>菠萝</li>").appendTo("#fruit");
+                $("#fruit li:eq(0)").clone(true).appendTo("ul");
+                $("#fruit li:contains('子')").remove();
+
+            });
+            //替换节点
+            $("#btn2").click(function () {
+                $("p:eq(1)").replaceWith("<strong>你最喜欢的运动</strong>");
+                $("<span>你不喜欢的水果是？</span>").css(
+                    {
+                        "display": "inline-block",
+                        "color": "red"
+                    }).replaceAll("p:first").click(function () {
+                        alert(this.innerText);
+                    })
+            });
+
+            //包裹节点
+            $("#btn3").click(function () {
+                $("p:first").wrap("<strong></strong>");
+                $("ul:first li").wrapAll("<em></em>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>DOM树</h3>
+    <p title="水果">
+        你喜欢的水果是？
+        <span>fruit</span>
+    </p>
+    <ul id="fruit">
+        <li title="苹果">苹果</li>
+        <li title="桔子">桔子</li>
+        <li title="香蕉">香蕉</li>
+    </ul>
+    <p title="颜色">你最喜欢的颜色</p>
+    <ul id="color">
+        <li>红色</li>
+        <li>绿色</li>
+        <li>蓝色</li>
+    </ul>
+    <button id="btn1">复制节点</button>
+    <button id="btn2">替换节点</button>
+    <button id="btn3">包裹节点</button>
+
+</body>
+</html>

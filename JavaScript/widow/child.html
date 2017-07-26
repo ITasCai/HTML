@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        function add() {
+            alert("添加成功");
+            window.opener.document.getElementById("txtReturn").value = document.getElementById("txtDeptId").value;
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <label>部门编号：</label>
+    <input type="text" name="name" value="" id="txtDeptID" /><br />
+
+    <label>部门名称</label>
+    <input type="text" name="name" value="" id="textDeptName" /><br />
+    <input type="button" name="name" value="增加" onclick="add();" />
+    <input type="button" name="name" value="关闭" onclick="window.close();" />
+
+</body>
+</html>

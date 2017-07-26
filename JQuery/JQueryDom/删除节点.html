@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+
+        $(function () {
+            //删除节点
+            $("#btn1").click(function () {
+                $("p").remove();
+                $("ul li:eq(1)").remove();
+                $("ul li:last").remove();
+            });
+
+            //清空节点
+            $("#btn2").click(function () {
+                $("#p2").empty();
+                $("ul li:eq(0)").empty();
+
+            });
+
+            $("#btn3").click(function( ){
+                
+                //$("ul:eq(1)li[title='apple']");
+                $("ul :eq(1) li:first").remove();
+                $("ul :eq(1)>li:last").remove();
+                $("ul :eq(1) li:eq(2)").remove();
+
+
+            });
+
+            $(function () {
+                $("#btn4").click(function () {
+                    $(".ul1 ul:eq(0) li:eq(2)").remove();
+                    $(".ul1 ul:eq(1) li:eq(1)").remove();
+                });
+               
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>DOM树</h3>
+    <p id="p1" title="水果">你喜欢的水果是？</p>
+    <p id="p2" >济宁会与</p>
+    <ul style="list-style:square">
+        <li title="apple">苹果</li>
+        <li title="orange">桔子</li>
+        <li title="banana">香蕉</li>
+    </ul>
+    <p id="p2" title="运动">你喜欢的运动？</p>
+    <ul style="list-style:circle">
+        <li title="apple">游泳</li>
+        <li title="orange">体操</li>
+        <li title="banana">篮球</li>
+    </ul>
+
+    <ul class="ul1">
+        <li>茶
+        <ul>
+            <li>红茶</li>
+            <li>绿茶</li>
+            <li>白茶</li>
+            <li>黑茶</li>
+        </ul>
+        </li>
+        <li>牛奶
+        <ul>
+            <li>纯奶</li>
+            <li>酸奶</li>
+        </ul>
+        </li>
+    </ul>
+    <button id="btn1">remove()方法</button>
+    <button id="btn2">empty()方法</button>
+    <button id="btn3">remove()方法2</button>
+    <button id="btn4">remove()方法3</button>
+
+</body>
+</html>

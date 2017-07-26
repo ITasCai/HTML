@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        //创建元素
+        function creare() {
+            var container = document.getElementById("container");
+            //var para = document.createElement("p");
+            //para.setAttribute("style", "color:red");
+            //var txt = document.createTextNode("hello world");
+            //para.appendChild(txt);
+            //container.appendChild(para);
+
+
+            var id = document.createElement("div");
+            id.setAttribute("style", "border: 1px solid red;width:200px;height:200px");
+            var ul = document.createElement("ul");
+            ul.setAttribute("style", "list-style-type: none");
+          
+            var arr = ["中国", "美国", "法国"];
+            for (var i = 0; i < arr.length; i++) {
+                var li = document.createElement("li");
+                var txt = document.createTextNode(arr
+                    [i]);
+                //li.firstChild.nodeValue = arr[i];
+                li.appendChild(txt);
+                ul.appendChild(li);
+
+            }
+            id.appendChild(ul);
+            container.appendChild(id);
+          
+        }
+
+        //在已有的元素前插入一个新的元素insertBefore（）；
+        function insert() {
+            var par = document.createElement("p1");
+            var txt = document.createTextNode("哈哈狗蛋");
+            par.appendChild(txt);
+            var hobby = document.getElementById("hobby");
+            hobby.parentNode.insertBefore(par,hobby);
+        }
+        //删除元素
+        function rmChild() {
+            var hobby = document.getElementById("hobby");
+            var child = document.getElementById("hobby2");
+            hobby.removeChild(child);
+           // child.parentNode.removeChild(child);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <ul id="hobby">
+            <li id="hobby1">唱歌</li>
+            <li id="hobby2">跳舞</li>
+            <li id="hobby3">游泳</li>
+        </ul>
+
+        <p id="p1">段落1</p>
+        <p id="p2">段落2</p>
+        <p id="p3">段落3</p>
+        <p id="p4">段落4</p>
+    </div>
+    <button id="btnCreate" onclick="creare()" >创建元素</button>
+    <button id="btnInsert" onclick="insert()">插入元素</button>
+    <button id="btnDelete" onclick="rmChild()">删除元素</button>
+    <button id="btnReplace">替换元素</button>
+</body>
+</html>

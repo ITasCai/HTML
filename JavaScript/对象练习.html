@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+       
+    <script>
+        function qiChe(brand, color, price) {
+            this.brand = brand;
+            this.color = color;
+            this.price = price;
+            this.show = function () {
+                document.write("品牌"+this.brand+"<br/>"+
+                    "颜色"+this.color+"<br/>"+
+                    "价格"+this.price+"<br/>");
+            }
+
+        }
+
+
+
+        var car1 = new qiChe("三轮车", "red", 2000);
+        var car2 = new qiChe("子项车", "red", 2000);
+        var car3 = new qiChe("乌龙车", "red", 2000);
+
+        var arrayCar = new Array(car1, car2, car3);
+
+        arrayCar.forEach(function (c) {
+            c.show();
+        });
+
+
+        window.onload = function () {
+            myfunction("狗蛋","hello");
+        }
+
+        function myfunction(name,msg) {
+            alert(name+"--------"+msg);
+        }
+
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $cr = $("#p1");
+            var cr = $cr[0];
+            cr = $cr.get(0);
+            //alert(cr.childNodes.length);
+
+
+            var element = document.getElementById("div2");
+            var $element = $(element);
+            // $(element).css("color","red");
+            //$(element).css({ "color": "red", "backgroundColor": "gray" });
+
+
+            $("#btnok").click(function () {
+                // alert("沃日，被点了！");
+                //$(this).html("<strong>登录</strong>");
+                //alert($(this).html());
+                //$(this).text("注册");
+                //alert($(this).text());
+            }).html("<h1>登录</h1>").css("backgroundColor", "red");
+
+            //链式操作
+            $("#div3").mousemove(function () {
+                //  $(this).css("backgroundColor","gray");
+                this.style = "color:green";
+            }).mouseout(function () {
+                //$(this).css("backgroundColor", "blue");
+                this.style = "color:red";
+            })
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="div1">
+        时间
+        <ul>
+            <li id="p1">昨天</li>
+            <li id="p2">今天</li>
+            <li id="p3">明天</li>
+        </ul>
+    </div>
+    <div id="div2">
+        兴趣
+        <ul>
+            <li >上网</li>
+            <li >睡觉</li>
+            <li >音乐</li>
+            <li>吃饭</li>
+        </ul>
+        <button id="btnok">提交</button>
+    </div>
+
+    <div style="width:200px;height:100px" id="div3">
+        <p>无敌是多么，多么寂寞</p> 
+        <p>无敌是多么，多么寂寞</p> 
+        <p>无敌是多么，多么寂寞</p> 
+    </div>
+</body>
+</html>

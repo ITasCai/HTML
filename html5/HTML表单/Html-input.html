@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HTML-input</title>
+	<meta charset="utf-8" />
+    <style>
+        .register {
+            margin:0px auto;
+            width:500px;
+
+
+        }
+        .items {
+            width:450px;
+            height:40px;
+        }
+
+        label {
+            display:inline-block;
+            width:70px;
+        }
+
+        .control {
+            width:450px;
+            height:40px;
+            padding-left:30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="register">
+        <fieldset>
+            <legend>
+                <strong>用户注册</strong>
+            </legend>
+            <form action="result.aspx" method="post">
+                <div class="items">
+                    <label for="username">用户名：</label>
+                    <input  type="text" id="username" name="username"  autofocus required placeholder="请输入用户名"  pattern=""
+                    size="25" maxlength="20"       
+                     oninvalid="setCustomValidity('用户名不能为空')"
+                     oninput="setCustomValidity('')"/>
+                </div>
+
+                <div class="items">
+                    <label for="password">密码：</label>
+                    <input type="password" id="password" name="password" value=""  required placeholder="请输入密码" />
+                </div>
+
+                <div class="rePwd">
+                    <label for="password">确认密码：</label>
+                    <input type="password" id="rePwd" name="rePwd" 
+                      required       placeholder="请再次输入密码" />
+                </div>
+
+                <div class="items">
+                    <label>性别：</label>
+                    <input  type="radio" name="gender" value="0" checked="checked"/>男
+                    <input type="radio" name="gender" value="1" />女
+                </div>
+
+                <div class="items">
+                    <label for="record" >学历</label>
+                    <select id="record" name="record">
+                        <option value="0">请选择</option>
+                        <option value="1">小学</option>
+                        <option value="2">初中</option>
+                        <option value="3">高中</option>
+                        <option value="1">大学</option>
+                    </select>
+                </div>
+
+                <div class="items">
+                    <label>爱好</label>
+                    <input type="checkbox" name="hobby" value="1" />吃饭
+                    <input type="checkbox" name="hobby" value="2" />睡觉
+                    <input type="checkbox" name="hobby" value="3"/>打豆豆
+                </div>
+
+                <div class="items">
+                    <label for="resumt">
+                        简历
+                    </label>
+                    <input type="file"  id="resumt" name="resumt"/>
+                </div>
+
+
+                <div class="items">
+                    <label>头像</label>
+                    <input  type="image" src="../images/smiley.gif"/>
+                </div>
+
+
+
+                <div class="items">
+                    <label>备注</label>
+                    <textarea name="textarea" style="width:200px" ></textarea>
+                </div>
+
+                <div class="control">
+                   
+                    <input  type="submit" id="btnSubmit" name="Submit" value="提交"/>
+                    <input type="reset" id="btnreset" name="reset" value="重置" />
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>

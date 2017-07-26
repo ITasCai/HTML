@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script type="text/javascript">
+        function validata() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username.trim.length== 0) {
+                document.getElementById("s1").innerHTML = "用户名不能为空";
+
+            } else if (passwordtrim.length == 0) {
+                document.getElementById("s2").innerHTML = "密码不能为空";
+            }
+            else if (!(password = "admin" && username == "admin") || !(password.trim.length == 0 && username.trim.length == 0)) {
+                alert("用户名或密码错误");
+            }
+            }
+            
+        
+    </script>
+
+</head>
+<body>
+    <form action="result.aspx" method="post">
+
+
+        <div class="items">
+            <label >用户名：</label>
+            <input type="text" id="username" name="username" />
+            <span id="s1"></span>
+        </div>
+
+        <div class="items">
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="password"  />
+            <span id="s2"></span>
+        </div>
+
+        <div class="control">
+
+            <input type="submit" id="btnSubmit" name="Submit" value="提交"
+                   onclick="validata();" />
+            <input type="reset" id="btnreset" name="reset" value="重置" />
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>语法</title>
+	<meta charset="utf-8" />
+    <script src="../js/JavaScript.js"></script>
+    <script>
+        //document.write("hello");
+        //window.alert("弹出");
+        //if (window.confirm("您确定要删除吗?")) {
+        //    document.write("删除成功")
+        //    window.close();//关闭当前页面
+        //} else {
+        //    document.write("删除失败");
+        //}
+        // hello();
+        function myfunction() {
+            document.write("慧与济宁欢迎您");
+        }
+        function message() {
+            alert("你进来了吗?");
+        }
+    </script>
+</head>
+<body onload="myfunction();message()">
+    <input type="button" name="name" value="你好" onclick="hello()"/>
+    <input type="button" name="name" value="弹出" onclick="window.alert('弹出')" />
+    <input type="button" name="name" value="提交" onclick="myfunction()" />
+</body>
+</html>

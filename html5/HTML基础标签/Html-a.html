@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        function Message() {
+            alert("这是一个链接");
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <a href="http://www.baidu.com" target="_blank" title="百度">百度</a><br />
+        <a href="http://www.baidu.com" target="_self" title="百度">百度</a><br />
+        <a href="http://www.baidu.com" target="_parent" title="百度">百度</a><br />
+        <a href="http://www.baidu.com" target="_top" title="百度">百度</a><br />
+        <a href="http://www.baidu.com" target="iframe" title="百度">百度</a>
+
+        <a id="a1" href="Deam.html" title="案例" >单击链接</a>
+    </p>
+
+    <p>
+        <a href="Deam.html" target="iframe" onclick="Message();">嘎嘎龙</a>
+    </p>
+
+    <p>
+        <!--浮动框架-->
+        <iframe width="500" height="400" frameborder="1" src="Welcome.html" name="iframe"></iframe>
+    </p>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        window.onload = function () {
+          //var content=document.getElementById("divHobby");
+         // alert(document.getElementById("divHobby").innerHTML);
+          //alert(content.innerText);
+       // content.innerHTML="<h1 style='color:red;text-align:center'>哈哈</h1>"
+        }
+        function setAtrr() {
+            //alert(document.getElementById("divHobby").getAttribute("title"));
+
+            //document.getElementById("divHobby").setAttribute("title", "link");
+            //alert(document.getElementById("divHobby").getAttribute("title"));
+
+
+            //document.getElementById("divHobby").setAttribute("style","width:300px;height:200px;border:2px solid black;color:red");
+            //}
+            //document.getElementById("divHobby").setAttribute("hidden", "hidden");
+
+            //document.getElementById("divHobby").setAttribute("onclick", "alert('无敌是多么，多么寂寞')");
+
+            //function Xou() {
+            //    alert(document.getElementsByTagName("a")[0].innerHTML);
+            //}
+
+            //document.getElementsByTagName("a")[0].setAttribute("onclick", "alert('" + this.innerText + "')");
+
+
+            var hobby = document.getElementsByName("hobby");
+            for (var i = 0; i < hobby.length; i++) {
+                hobby[i].setAttribute("onclick", "alert('" + hobby[i].innerText + "')");
+
+                hobby[i].setAttribute("style","color:red");
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="divHobby" title="hobby" >
+        <ul>
+            <!--<li><a href="#" onclick="Xou();">游泳</a></li>-->
+            <li name="hobby">游泳</li>
+            <li name="hobby">上网</li>
+            <li name="hobby">拳击</li>
+            <li name="hobby">音乐</li>
+        </ul>
+    </div>
+    <button id="btnSrtAtrr" onclick="setAtrr();">设置属性</button>
+</body>
+</html>

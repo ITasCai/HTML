@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        //3.append()
+        $(function () {
+            $("#btn1").click(function () {
+                $("ul").append("<li title='菠萝'>菠萝</li>")
+            });
+            //2.appendTo()
+            $("#btn2").click(function () {
+                $("<li title='荔枝'>荔枝</li>").appendTo("ul");
+            });
+
+            //3.parent
+            $("#btn3").click(function () {
+                $("ul").prepend("<li title='西瓜'>西瓜</li>");
+            });
+
+            //4.appendTo
+            $("#btn4").click(function () {
+                $("<li title='芒果'>芒果</li>").prependTo("ul");
+            });
+
+            //5.after
+            $("#btn5").click(function () {
+                $("#p1").after("<p>JAVA</p>");
+            });
+            //6.insertAfter
+            $("#btn6").click(function () {
+                $("<p id='p2'>C++</p>").insertAfter("#p1");
+            });
+
+            //7.before
+            $("#btn7").click(function () {
+                $("#p1").before("<p>c语言</p>");
+            });
+
+            //8.insertBefore
+            $("#btn8").click(function () {
+                $("<a href='#'>学习开发语言网站</a>").insertBefore($("#software>p:eq(0)"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Dom树</h3>
+    <p title="水果">你喜欢的水果是?</p>
+    <ul>
+        <li title="apple">苹果</li>
+        <li title="orange">橘子</li>
+        <li title="banana">香蕉</li>
+    </ul>
+    <div id="software">
+        <h4>开发语言</h4>
+        <p id="p1">C#</p>
+    </div>
+    <button id="btn1">append()方法</button>
+    <button id="btn2">appendTo()方法</button>
+    <button id="btn3">prepend()方法</button>
+    <button id="btn4">prependTo()方法</button>
+    <button id="btn5">after()方法</button>
+    <button id="btn6">insertAfter()方法</button>
+    <button id="btn7">before()方法</button>
+    <button id="btn8">insertBefore()方法</button>
+</body>
+</html>
