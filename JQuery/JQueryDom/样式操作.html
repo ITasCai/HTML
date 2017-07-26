@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+          
+            $("#btn1").click(function () {
+                //设置和获取样式
+                alert($("#p1").attr("class"));
+                //移除样式
+                $("#p1").removeClass("p_content").removeAttr();
+
+                $("#p1").addClass("p_bg").addClass("p_content");
+            })
+
+           //追加样式
+            $("#btn2").click(function () {
+                $("#p1").addClass("p_bg");
+            })
+
+            //移除样式
+            $("#btn3").click(function () {
+                $("#p1").removeClass();
+                $("#p2").addClass("p_bg").removeClass("p_content");
+            })
+
+            //判断样式
+            $("#btn4").click(function () {
+                var isHas1 = $("#p1").hasClass("p_content");
+                var isHas2 = $("#p1").hasClass("class1");
+                alert(isHas1);
+                alert(isHas2);
+
+            });
+        });
+    </script>
+    <style>
+        .p_content {
+            color: dodgerblue;
+            font-size: 15px;
+        }
+
+        .p_bg {
+            background-color: red;
+            color: yellow;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <p id="p1" class="p_content">你最喜欢的水果?</p>
+    <ul>
+        <li title="苹果">苹果</li>
+        <li title="桔子">桔子</li>
+        <li title="香蕉">香蕉</li>
+    </ul>
+
+    <p id="p2">你最喜欢的运动是？</p>
+    <ul>
+        <li>游泳</li>
+        <li>篮球</li>
+        <li>足球</li>
+    </ul>
+
+    <button id="btn1">设置和获取样式</button>
+    <button id="btn2">追加样式</button><br /><br />
+    <button id="btn3">移除样式</button>
+    <button id="btn4">判断样式</button><br /><br />
+
+</body>
+</html>

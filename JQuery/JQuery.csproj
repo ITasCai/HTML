@@ -100,6 +100,12 @@
     <Content Include="JQueryDom\属性操作.html" />
     <Content Include="JQueryDom\插入节点.html" />
     <Content Include="JQueryDom\查找节点.html" />
+    <Content Include="JQueryDom\样式操作.html" />
+    <Content Include="JQueryDom\练习.html" />
+    <Content Include="JQueryDom\设置和获取html文本和值.html" />
+    <Content Include="JQuery事件\合成事件.html" />
+    <Content Include="JQuery动画\显示和隐藏.html" />
+    <Content Include="JQuery动画\滑动.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -132,9 +138,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="JQuery事件\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

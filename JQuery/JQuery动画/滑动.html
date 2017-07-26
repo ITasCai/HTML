@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //缩短
+            $("#btn_slideUp").click(function () {
+                $("#div1").slideUp();
+            });
+
+            //拉伸
+            $("#btn_slideDown").click(function () {
+                $("#div1").slideDown(1000);
+            });
+        });
+    </script>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>滑动</h3>
+    <div id="div1">
+        <ul>
+            <li>红色</li>
+            <li>白色</li>
+            <li>蓝色</li>
+            <li>绿色</li>
+        </ul>
+    </div>
+    <button id="btn_slideUp">缩短</button>
+    <button id="btn_slideDown">拉伸</button>
+
+</body>
+</html>

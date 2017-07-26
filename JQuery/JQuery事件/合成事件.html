@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $("div").hover(function () {
+                $(this).css({
+                    "color": "red",
+                    "border":"1px solid blue"
+                })
+            }, function () {
+                $(this).css({
+                    "color": "blue",
+                    "border":"1px solid blue"
+                })
+            })
+
+            $("ul li:eq(0)").hover(function () {
+                $(this).css("background","red");
+            }, function () {
+                $(this).css("background", "blue");
+            })
+
+
+            $("#btnShow").click(function () {
+                $("h3:last").toggle();
+            })   
+          
+        });
+    </script>
+</head>
+<body>
+    <h3>hover方法</h3>
+    <div>鼠标移入，移除</div>
+    <ul>
+        <li>C#</li>
+        <li>java</li>
+        <li>php</li>
+    </ul>
+    <h3>toggle方法</h3>
+    <button id="btnShow">显示/隐藏</button>
+</body>
+</html>

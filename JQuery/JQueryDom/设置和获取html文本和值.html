@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $("p").html("<h3>用户登录</h3>");
+            alert($("p").html());
+
+            $("p").text("用户登录");
+            alert($("p").text());
+
+            $("input:text").val("请输入用户名");
+            alert($("input:text").val());
+
+            $("#userName").focus(function () {
+                if ($(this).val().trim()=="请输入用户名") {
+                    $(this).val("");
+                }
+            }).blur(function () {
+                if ($(this).val().trim() == 0) {
+                    $(this).val("请输入用户名");
+                }
+            })
+
+            $("#btnShow").click(function () {
+                $("#fruits").val(["1","2"])
+            })
+        });
+
+
+    </script>
+
+    <style>
+         .login {
+            width: 500px;
+            height: 200px;
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+
+        .register {
+            width: 500px;
+            height: 200px;
+            margin: 0px auto;
+            border: 1px solid black;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .field {
+            width: 400px;
+            height: 30px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        label {
+            display: inline-block;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <p id="title">
+
+        </p>
+        <form>
+            <div class="field">
+                <label for="userName">账号:</label>
+                <input type="text" name="username" id="userName" />
+            </div>
+            <div class="field">
+                <label for="userPwd">密码:</label>
+                <input type="password" name="userpwd" id="userPwd" />
+            </div>
+            <div class="field">
+                <input type="submit" name="submit" id="btnSubmit" value="登录" />
+                <input type="reset" name="reset" id="btnReset" value="重置" />
+            </div>
+        </form>
+    </div>
+    <div class="register">
+        <select id="fruits" multiple="multiple">
+            <option value="1">苹果</option>
+            <option value="2">香蕉</option>
+            <option value="3">西瓜</option>
+        </select>
+        <button id="btnShow">选中</button>
+    </div>
+
+</body>
+</html>

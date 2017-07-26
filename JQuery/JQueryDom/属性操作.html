@@ -11,7 +11,7 @@
                 var $li_title = $("ul li:eq(0)").attr("title");
                 $("p").attr("title", "fruit");
                 $("p").attr("name", "水果");
-                $("div").attr({ "title": "sport", "id": "div1" });
+                $("div").attr({ "title": "sport", "id": "div1" });               // $("#pf").prop("name","pp");
             });
 
             $("#btn2").click(function () {
@@ -20,7 +20,11 @@
             });
 
             $("#btn3").click(function () {
-                alert($("ul:eq(1)").text());
+                // alert($("ul:eq(1)").text());
+                $("ul:eq(1)").each(function () {
+                    alert(this.innerText);
+                    alert($(this).index());
+                })
             });
         });
     </script>
@@ -42,9 +46,12 @@
     </div>
 
     <button id="btn1">获取设置属性</button>
-    <button id="btn2">移除属性</button><br /><br />
-    <button id="btn3">获取值</button><br /><br />
+    <button id="btn2">移除属性</button><br />
+    <button id="btn3">获取值</button><br />
 
-
+   
+     
+    <p id="pf"></p>
+    
 </body>
 </html>

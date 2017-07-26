@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $("#btnShow").click(function () {
+                $("p").show();
+            });
+
+            $("#btnHide").click(function () {
+                $("p").hide();
+            });
+
+            //带有动画的显示和隐藏
+
+            $("#btnShow1").click(function () {
+                $("p").show("slow");
+            });
+
+            $("#btnHide1").click(function () {
+                $("p").hide(1000);
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h3>显示和隐藏</h3>
+    <p>显示这段文字</p>
+    <button id="btnShow">显示</button>
+    <button id="btnHide">隐藏</button>
+    <h3>带有动画的显示和隐藏</h3>
+    <button id="btnShow1">动画显示</button>
+    <button id="btnHide1">动画隐藏</button>
+
+</body>
+</html>

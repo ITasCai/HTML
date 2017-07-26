@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $(":text").focus(function () {
+                $(":text").addClass("inh");
+            }).bl(function () {
+                $(":text").removeClass("inh").addClass("ins");
+            })
+
+            
+           
+            //setClass($("input[name='username']"));
+            //setClass($("input:password"));
+
+            //function setClass(obj) {
+            //    obj.focus(function () {
+            //        $(this).addClass("blue");
+            //    }).blur(function () {
+            //        $(this).addClass("red").removeClass("blue");
+            //    });
+            //};
+            
+        });
+    </script>
+    <style>
+        .inh {
+            border:1px solid darkgreen;
+        }
+
+        .ins {
+             border:1px solid darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <input  type="text" name="name" />
+</body>
+</html>
