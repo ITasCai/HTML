@@ -106,6 +106,8 @@
     <Content Include="JQuery事件\合成事件.html" />
     <Content Include="JQuery动画\显示和隐藏.html" />
     <Content Include="JQuery动画\滑动.html" />
+    <Content Include="JQuery表格\表格.html" />
+    <Content Include="JQuery表格\表格展开和折叠.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

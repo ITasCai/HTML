@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $("tbody tr:odd").addClass("odd");
+            $("tbody tr:even").addClass("even");
+            
+           
+            $("thead [name='selectAll']:checkbox").click(function () {
+                //第一种
+                //if ($(this).prop("checked")) {
+                //    $("tbody [name='choice']:checkbox").attr("checked", true);
+
+                //} else {
+                //    $("tbody [name='choice']:checkbox").attr("checked", false);
+                //}
+
+
+
+               // 第二种  简写
+                //$("tbody [name='choice']:checkbox").prop("checked", $(this).prop("checked"));
+
+                //第三种
+                //$("tbody [name='choice']:checkbox").prop("checked", this.checked);
+
+                 //第四种
+                //var flag = this.checked;
+                //$("tbody [name='choice']:checkbox").each(function () {
+                //    this.checked = flag;
+                //})
+
+
+                //$("tbody tr").find(":checkbox").prop("checked",false);
+                //if (this.checked) {
+
+                //    $("tbody [name='choice']:checkbox:odd").prop("checked", true);
+                   
+                //} else {
+                //    $("tbody [name='choice']:checkbox:even").prop("checked", true);
+                  
+                //}
+                //反选
+                //$("tbody [name='choice']:checkbox").each(function () {
+                //    this.checked =! this.checked
+                //})
+
+                
+            })
+
+            //高亮显示
+
+            $("tbody tr").click(function () {
+                if ($(this).hasClass("selected")) {
+                    $(this).removeClass("selected").find(":checkbox").prop("checked",false);;
+                } else {
+                    $(this).addClass("selected").find(":checkbox").prop("checked", true);
+                    $(this).find("td:gt(0)").each(function () {
+                        alert($(this).text());
+                    })
+                 
+                 
+                }
+            })
+           
+            //var $sc = $(" <th><button>删除</button></th>");
+            //$("tbody>tr").append($sc);
+
+            $("<th>操作</th>").appendTo($("thead tr"));
+            $("tbody tr").each(function () {
+                var $del = $("<input type='button' value='删除' id='btndel'>");
+                var $tb = $("<td></td>");
+                $del.appendTo($tb);
+                $(this).append($tb);
+                // $(this).children($("#btndel")).attr("onclick", "confirm('确定要删除吗')");
+              //  $(this).find("td").last().attr("onclick", "confirm('确定要删除吗')");
+
+                $(this).find("#btndel").attr("onclick", "confirm('确定要删除吗')");
+            })
+
+
+            //过滤
+            $("#filterName").keyup(function () {
+                $("table tbody tr").hide()//隐藏
+                .filter(":contains('" + ($(this).val()) + "')")//查找数据
+                .show();//显示 
+
+            })
+        })
+    </script>
+    <style>
+        .main {
+            width: 500px;
+            margin: 10px auto;
+        }
+
+        table {
+            width: 400px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+        /* 偶数行样式*/
+        .even {
+            background-color: #FFF38F;
+        }
+
+        /* 奇数行样式*/
+        .odd {
+            background-color: #FFFFEE;
+        }
+
+        .selected {
+            background: #FF6500;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        筛选:<input type="text" name="name" id="filterName" value="" /><br /><br />
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="selectAll" value="" /></th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>地址</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="choice" value="choice" /></td>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>20</td>
+                    <td>山东济宁</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="choice" value="" /></td>
+                    <td>李四</td>
+                    <td>女</td>
+                    <td>21</td>
+                    <td>山东济南</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="choice" value="" /></td>
+                    <td>王五</td>
+                    <td>男</td>
+                    <td>18</td>
+                    <td>山东青岛</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="choice" value="" /></td>
+                    <td>赵六</td>
+                    <td>女</td>
+                    <td>21</td>
+                    <td>山东泰安</td>
+                </tr>
+            </tbody>
+            
+        </table>
+       
+    </div>
+</body>
+</html>
